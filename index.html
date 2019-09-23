@@ -1,6 +1,7 @@
 
 
 <html>
+    <script src="jquery-3.4.1.js"></script>
     <body>
 
     <h1><span id="myname"></span></h1>
@@ -8,10 +9,9 @@
         <img src="matrix.png">
          <img id="logo" src="QQ图片20190831211425.gif" style="border-radius: 10px 20px 40px 80px">
      </p>
-        <script src="jquery-3.4.1.js"></script>
         <script> 
         $(function(){
-               $.get("data.json",function(result){
+               $.get("Untitled-1.json",function(result){
                    $("myname").text(result.myname);
                    $("mynumber").text(result.mynumber);
                }) 
