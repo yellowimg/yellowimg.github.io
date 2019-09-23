@@ -1,9 +1,18 @@
 
 
 <html>
+    <script src="jquery-3.4.1.js"></script>
     <body>
-    <h1>我叫黄想相</h1>
-     <p>我的学号<span id="studentnumber">18002090214</span>
+        <script> 
+        $(function(){
+               $.get("Untitled-1.json",function(result){
+                   $("myname").text(result.myname);
+                   $("mynumber").text(result.mynumber);
+               }) 
+        })
+        </script>
+    <h1><span id="myname"></span></h1>
+     <p>我的学号<span id="mynumber"></span>
         <img src="matrix.png">
          <img id="logo" src="QQ图片20190831211425.gif" style="border-radius: 10px 20px 40px 80px">
      </p>
