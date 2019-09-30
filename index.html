@@ -8,6 +8,7 @@
      <p>我的学号<span id="mynumber"></span>
         <img src="matrix.png">
          <img id="logo" src="QQ图片20190831211425.gif" style="border-radius: 10px 20px 40px 80px">
+         <input id="btn" type="submit" value="切换" @click>
      </p>
         <script> 
         $(function(){
@@ -15,6 +16,12 @@
                    $("myname").text(result.myname);
                    $("mynumber").text(result.mynumber);
                }) 
+        })
+        $("#btn").click(function(){
+            $.get("./data1.json",function(result){
+                   $("myname").text(result.myname);
+                   $("mynumber").text(result.mynumber);
+            }) 
         })
         </script>
     </body>
